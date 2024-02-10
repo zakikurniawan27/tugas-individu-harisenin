@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- config tailwind -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: "#da373d",
+            },
+            spacing: {
+              "60px": "60px",
+            },
+          },
+        },
+      };
+    </script>
+    <style></style>
+    <!-- config tailwind end -->
+    <title>login page</title>
+  </head>
+  <body>
+    <section
+      class="flex items-center justify-center min-h-screen bg-red-600 shadow-lg bg-gradient-to-tr from from-slate-100"
+    >
+      <!-- login -->
+      <div
+        class="flex max-w-3xl p-5 bg-red-600 shadow-lg bg-gradient-to-tr from from-slate-100 to rounded-2xl"
+      >
+        <!-- form -->
+        <div class="px-16 sm:w-1/2">
+          <h1 class="mb-3 text-2xl font-bold"><a href="#">Mizan Store</a></h1>
+          <p
+            class="text-sm first-letter:text-4xl first-letter:font-bold first-letter:text-slate-900 first-letter:mr-1 first-letter:float-left"
+          >
+            Kemampuan membaca itu sebuah rahmat.Kegemaran membaca;sebuah
+            kebahagiaan
+          </p>
+          <form action="" class="flex flex-col gap-4">
+            <input
+              class="p-2 duration-200 border mt-7 rounded-2xl hover:scale-110 bg-slate-100"
+              type="text"
+              name="email"
+              placeholder="example@gmail.com"
+            />
+            <input
+              class="p-2 duration-200 border rounded-2xl hover:scale-110 bg-slate-100"
+              type="password"
+              name="password"
+              placeholder="your password"
+            />
+            <button
+              class="flex items-center justify-center w-1/2 text-sm duration-200 mx-14 bg-slate-100 rounded-2xl hover:scale-110"
+            >
+              <a href="/index.html">Login</a>
+            </button>
+            <div class="grid items-center grid-cols-3 mt-1 text-black">
+              <hr class="border-slate-100" />
+              <p class="flex justify-center -my-10">OR</p>
+              <hr class="border-slate-100" />
+            </div>
+            <!-- logo google -->
+            <button
+              class="flex items-center justify-center w-full py-2 text-sm duration-200 border bg-slate-100 rounded-xl hover:scale-110"
+            >
+              <img class="h-5 mr-2" src="asset/logoGoogle.jpg" alt="" /> Login
+              dengan Google
+            </button>
+            <!-- logo google end -->
+
+            <div class="flex items-center justify-between mt-3 text-xs text">
+              <p>Tidak punya akun?</p>
+              <button
+                class="px-5 py-2 duration-200 border bg-slate-100 rounded-xl hover:scale-110"
+              >
+                Daftar sekarang!
+              </button>
+            </div>
+          </form>
+        </div>
+        <!-- form end -->
+
+        <!-- image -->
+        <div class="flex items-stretch w-1/2 p-10 shadow-2xl rounded-2xl">
+          <img class="rounded-2xl" src="asset/logoBuku.jpg" alt="" />
+        </div>
+        <!-- image end -->
+      </div>
+      <!-- login end -->
+    </section>
+  </body>
+</html>
