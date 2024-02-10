@@ -96,7 +96,7 @@ detailProduct.forEach((item) => {
   gambarDetailProduk3Elm.appendChild(newImg3Elm);
 
   //ketersedian
-  let ketersediaan = document.getElementById("status");
+  const ketersediaan = document.getElementById("status");
   if (item.status == true) {
     ketersediaan.innerHTML = "Tersedia";
   }
@@ -105,12 +105,22 @@ detailProduct.forEach((item) => {
   }
 
   //title
-  let judul = document.getElementById("title");
+  const judul = document.getElementById("title");
   judul.innerHTML = item.title;
 
+  //author - publisher
+  const authorElm = document.getElementById("author-publisher");
+  const newAuthorElm = document.createElement("h3");
+  newAuthorElm.setAttribute(
+    "class",
+    "text-xs font-bold text-orange-400 font-base md:text-base"
+  );
+  newAuthorElm.innerHTML = `${item.author} - ${item.publisher}`;
+  authorElm.appendChild(newAuthorElm);
+
   //deskripsi
-  let deskripsiSingkat = document.getElementById("short-description");
-  let deskripsiTeks = document.getElementById("Deskripsi");
+  const deskripsiSingkat = document.getElementById("short-description");
+  const deskripsiTeks = document.getElementById("Deskripsi");
   deskripsiSingkat.innerHTML = item.description.short;
   deskripsiTeks.innerHTML = item.description.long;
 });
